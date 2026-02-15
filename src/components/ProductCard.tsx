@@ -16,7 +16,7 @@ const ProductCard = ({ product, index = 0, onQuickView }: ProductCardProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-300"
+      className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5"
     >
       <div
         className="relative aspect-square overflow-hidden cursor-pointer"
@@ -29,7 +29,7 @@ const ProductCard = ({ product, index = 0, onQuickView }: ProductCardProps) => {
           loading="lazy"
         />
         <div className="absolute inset-0 bg-background/0 group-hover:bg-background/40 transition-all duration-300 flex items-center justify-center">
-          <span className="text-foreground font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-wider">
+          <span className="text-foreground font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-wider bg-primary/80 px-4 py-2 rounded-full">
             Quick View
           </span>
         </div>
@@ -46,7 +46,7 @@ const ProductCard = ({ product, index = 0, onQuickView }: ProductCardProps) => {
           {product.description}
         </p>
         <a href={getWhatsAppLink(product.name)} target="_blank" rel="noopener noreferrer" className="mt-3 block">
-          <Button className="w-full gap-2" size="sm">
+          <Button className="w-full gap-2 gradient-coral border-0" size="sm">
             <MessageCircle className="w-4 h-4" /> Inquire on WhatsApp
           </Button>
         </a>

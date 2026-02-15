@@ -1,3 +1,17 @@
+import tightsBraSet from "@/assets/products/tights-bra-set.jpg";
+import orangeSportsBra from "@/assets/products/orange-sports-bra.jpg";
+import blueSet from "@/assets/products/blue-set.jpg";
+import pumaBra from "@/assets/products/puma-bra.jpg";
+import colorfulTop from "@/assets/products/colorful-top.jpg";
+import coralBra from "@/assets/products/coral-bra.jpg";
+import blackLeggings from "@/assets/products/black-leggings.jpg";
+import burgundyJoggers from "@/assets/products/burgundy-joggers.jpg";
+import gymBag from "@/assets/products/gym-bag.jpg";
+import resistanceBands from "@/assets/products/resistance-bands.jpg";
+import whiteLongsleeve from "@/assets/products/white-longsleeve.jpg";
+import trainingGloves from "@/assets/products/training-gloves.jpg";
+import shakerBottle from "@/assets/products/shaker-bottle.jpg";
+
 export type Product = {
   id: string;
   name: string;
@@ -20,98 +34,106 @@ export const getWhatsAppLink = (productName?: string) => {
 export const products: Product[] = [
   {
     id: "1",
-    name: "Performance Tank Top",
+    name: "Cross-Back Sports Bra",
     category: "gym-wear",
-    description: "Breathable, moisture-wicking tank top designed for intense workouts. Lightweight and stylish.",
-    images: ["/placeholder.svg"],
+    description: "Vibrant orange cross-back design with ribbed fabric. High support for intense workouts.",
+    images: [orangeSportsBra],
     featured: true,
   },
   {
     id: "2",
-    name: "Flex Fit Leggings",
+    name: "V-Waist Leggings Set",
     category: "gym-wear",
-    description: "High-waist compression leggings with squat-proof fabric. Maximum flexibility and comfort.",
-    images: ["/placeholder.svg"],
+    description: "High-waist sculpting leggings paired with matching sports bra. Ultimate comfort meets style.",
+    images: [tightsBraSet],
     featured: true,
   },
   {
     id: "3",
-    name: "Urban Sports Hoodie",
-    category: "athleisure",
-    description: "Premium cotton-blend hoodie perfect for pre and post workout. Street-ready style.",
-    images: ["/placeholder.svg"],
+    name: "Cutout Sports Bra & Tights",
+    category: "gym-wear",
+    description: "Bold blue cutout sports bra with matching compression tights. Turn heads at the gym.",
+    images: [blueSet],
     featured: true,
   },
   {
     id: "4",
-    name: "Power Shorts",
+    name: "Classic Sports Bralette",
     category: "gym-wear",
-    description: "Quick-dry training shorts with built-in liner. Designed for maximum range of motion.",
-    images: ["/placeholder.svg"],
+    description: "Comfortable heather grey bralette with branded band. Perfect for light to medium support.",
+    images: [pumaBra],
     featured: true,
   },
   {
     id: "5",
-    name: "Street Joggers",
+    name: "Abstract Print Crop Top",
     category: "athleisure",
-    description: "Tapered joggers with zip pockets. From gym to street in style.",
-    images: ["/placeholder.svg"],
-    featured: false,
+    description: "Vibrant abstract racerback crop top. Bold prints that pop from gym to brunch.",
+    images: [colorfulTop],
+    featured: true,
   },
   {
     id: "6",
-    name: "Compression Sports Bra",
+    name: "Strappy Back Bra",
     category: "gym-wear",
-    description: "High-support sports bra with breathable mesh panels. Built for high-impact training.",
-    images: ["/placeholder.svg"],
+    description: "Beautiful coral strappy-back design with adjustable straps. Form meets function.",
+    images: [coralBra],
     featured: true,
   },
   {
     id: "7",
-    name: "Gym Duffel Bag",
-    category: "accessories",
-    description: "Spacious duffel with shoe compartment and wet pocket. Your perfect gym companion.",
-    images: ["/placeholder.svg"],
+    name: "Sculpt Compression Leggings",
+    category: "gym-wear",
+    description: "Sleek black compression leggings with contouring seams. Squat-proof and buttery soft.",
+    images: [blackLeggings],
     featured: false,
   },
   {
     id: "8",
-    name: "Resistance Band Set",
-    category: "accessories",
-    description: "5-piece resistance band set with varying levels. Train anywhere, anytime.",
-    images: ["/placeholder.svg"],
-    featured: true,
+    name: "Tapered Joggers",
+    category: "athleisure",
+    description: "Burgundy wine tapered joggers with zip pockets. From gym to street in style.",
+    images: [burgundyJoggers],
+    featured: false,
   },
   {
     id: "9",
-    name: "Oversized Muscle Tee",
+    name: "Seamless Long Sleeve Crop",
     category: "athleisure",
-    description: "Relaxed fit muscle tee in premium cotton. Bold graphics, effortless style.",
-    images: ["/placeholder.svg"],
+    description: "White seamless crop top with thumb holes. Engineered for layering and performance.",
+    images: [whiteLongsleeve],
     featured: false,
   },
   {
     id: "10",
-    name: "Training Gloves",
+    name: "Gym Duffel Bag",
     category: "accessories",
-    description: "Padded training gloves with wrist support. Grip harder, lift heavier.",
-    images: ["/placeholder.svg"],
+    description: "Spacious pink duffel with shoe compartment and wet pocket. Your perfect gym companion.",
+    images: [gymBag],
     featured: false,
   },
   {
     id: "11",
-    name: "Seamless Long Sleeve",
-    category: "gym-wear",
-    description: "Body-contour seamless top with thumb holes. Engineered for performance.",
-    images: ["/placeholder.svg"],
+    name: "Resistance Band Set",
+    category: "accessories",
+    description: "5-piece resistance band set with varying levels. Train anywhere, anytime.",
+    images: [resistanceBands],
     featured: false,
   },
   {
     id: "12",
-    name: "Shaker Bottle Pro",
+    name: "Training Gloves",
     category: "accessories",
-    description: "Leak-proof shaker with mixing ball and storage compartment. Fuel your gains.",
-    images: ["/placeholder.svg"],
+    description: "Padded training gloves with rose gold accents and wrist support. Lift in style.",
+    images: [trainingGloves],
+    featured: false,
+  },
+  {
+    id: "13",
+    name: "Rose Gold Shaker Bottle",
+    category: "accessories",
+    description: "Leak-proof shaker with mixing ball and storage compartment. Fuel your gains beautifully.",
+    images: [shakerBottle],
     featured: false,
   },
 ];
