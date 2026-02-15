@@ -11,6 +11,13 @@ import resistanceBands from "@/assets/products/resistance-bands.jpg";
 import whiteLongsleeve from "@/assets/products/white-longsleeve.jpg";
 import trainingGloves from "@/assets/products/training-gloves.jpg";
 import shakerBottle from "@/assets/products/shaker-bottle.jpg";
+import berrySportsBra from "@/assets/products/berry-sports-bra.jpg";
+import berryRacerback from "@/assets/products/berry-racerback.jpg";
+import winePocketLeggings from "@/assets/products/wine-pocket-leggings.jpg";
+import charcoalHeatherLeggings from "@/assets/products/charcoal-heather-leggings.jpg";
+import pinkWaistSkirtedLeggings from "@/assets/products/pink-waist-skirted-leggings.jpg";
+import classicBlackLeggingsV2 from "@/assets/products/classic-black-leggings-v2.jpg";
+import magentaCrocLeggings from "@/assets/products/magenta-croc-leggings.jpg";
 
 export type Product = {
   id: string;
@@ -134,6 +141,54 @@ export const products: Product[] = [
     category: "accessories",
     description: "Leak-proof shaker with mixing ball and storage compartment. Fuel your gains beautifully.",
     images: [shakerBottle],
+    featured: false,
+  },
+  {
+    id: "14",
+    name: "Berry Racerback Sports Bra",
+    category: "gym-wear",
+    description: "Rich berry-toned racerback bra with ribbed band. High support meets bold color.",
+    images: [berrySportsBra, berryRacerback],
+    featured: true,
+  },
+  {
+    id: "15",
+    name: "Wine Pocket Leggings",
+    category: "gym-wear",
+    description: "Deep wine high-waist leggings with side pockets. Squat-proof with a sculpting fit.",
+    images: [winePocketLeggings],
+    featured: true,
+  },
+  {
+    id: "16",
+    name: "Charcoal Heather Leggings",
+    category: "gym-wear",
+    description: "Heathered charcoal compression leggings with contour seams. Sleek and versatile.",
+    images: [charcoalHeatherLeggings],
+    featured: false,
+  },
+  {
+    id: "17",
+    name: "Skirted Training Leggings",
+    category: "athleisure",
+    description: "Black leggings with pink waistband and built-in skirt overlay. Gym to street in style.",
+    images: [pinkWaistSkirtedLeggings],
+    featured: false,
+  },
+  {
+    id: "18",
+    name: "Midnight Black Leggings",
+    category: "gym-wear",
+    description: "Ultra-smooth solid black leggings with matte finish. The ultimate wardrobe essential.",
+    images: [classicBlackLeggingsV2],
+    featured: false,
+  },
+  {
+    id: "19",
+    name: "Magenta Croc-Print Leggings",
+    category: "gym-wear",
+    description: "Bold magenta leggings with subtle crocodile texture. Stand out with every rep.",
+    images: [magentaCrocLeggings],
     featured: false,
   },
 ];
