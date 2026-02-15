@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Instagram, Truck, Shield, Sparkles, MessageCircle, Heart } from "lucide-react";
+import { ArrowRight, Instagram, Truck, Shield, Sparkles, MessageCircle, Heart, Flame, Dumbbell, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import ProductCard from "@/components/ProductCard";
 import ProductQuickView from "@/components/ProductQuickView";
 import { products, Product, INSTAGRAM_URL, getWhatsAppLink } from "@/data/products";
 import heroBg from "@/assets/hero-bg.jpg";
+import workoutBanner from "@/assets/workout-banner.jpg";
 
 const featuredProducts = products.filter((p) => p.featured).slice(0, 6);
-const galleryImages = products.slice(0, 8);
+const galleryImages = products.slice(0, 10);
 
 const Index = () => {
   const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
@@ -88,6 +89,52 @@ const Index = () => {
                 View All Products <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Animated Workout Motivation Banner */}
+      <section className="relative py-0 overflow-hidden">
+        <div className="relative h-[60vh] min-h-[400px]">
+          <img src={workoutBanner} alt="" className="absolute inset-0 w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
+          <div className="relative z-10 h-full flex items-center">
+            <div className="container mx-auto px-4">
+              <div className="max-w-lg">
+                <motion.div
+                  initial={{ opacity: 0, x: -40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.7 }}
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    {[Flame, Dumbbell, Zap].map((Icon, i) => (
+                      <motion.div
+                        key={i}
+                        animate={{ y: [0, -8, 0] }}
+                        transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.3 }}
+                        className="w-10 h-10 rounded-full gradient-coral flex items-center justify-center"
+                      >
+                        <Icon className="w-5 h-5 text-primary-foreground" />
+                      </motion.div>
+                    ))}
+                  </div>
+                  <h2 className="font-display text-5xl md:text-6xl lg:text-7xl tracking-wider leading-none mb-4">
+                    TRAIN<br />
+                    <span className="text-primary text-glow">LIKE A</span><br />
+                    QUEEN
+                  </h2>
+                  <p className="text-muted-foreground text-lg mb-6">
+                    Every rep counts. Every set matters. Gear that keeps up with your grind. 💪
+                  </p>
+                  <Link to="/shop">
+                    <Button size="lg" className="gap-2 gradient-coral border-0 neon-glow">
+                      Shop the Collection <ArrowRight className="w-4 h-4" />
+                    </Button>
+                  </Link>
+                </motion.div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
