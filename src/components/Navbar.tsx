@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { INSTAGRAM_URL } from "@/data/products";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -15,11 +16,14 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="font-display text-2xl tracking-wider text-foreground">
-            FITNESS FANATICS <span className="text-primary">254</span>
+          <Link to="/" className="flex items-center gap-2">
+            <img src={logo} alt="Fitness Fanatics 254" className="h-10 w-10 rounded-lg" />
+            <span className="font-display text-xl tracking-wider text-foreground">
+              FF <span className="text-primary">254</span>
+            </span>
           </Link>
 
           {/* Desktop nav */}

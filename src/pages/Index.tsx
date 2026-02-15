@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Instagram, Truck, Shield, Sparkles, MessageCircle } from "lucide-react";
+import { ArrowRight, Instagram, Truck, Shield, Sparkles, MessageCircle, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import ProductCard from "@/components/ProductCard";
 import ProductQuickView from "@/components/ProductQuickView";
 import { products, Product, INSTAGRAM_URL, getWhatsAppLink } from "@/data/products";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const featuredProducts = products.filter((p) => p.featured).slice(0, 6);
 const galleryImages = products.slice(0, 8);
@@ -18,7 +19,9 @@ const Index = () => {
     <Layout>
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-secondary" />
+        <div className="absolute inset-0">
+          <img src={heroBg} alt="" className="w-full h-full object-cover" />
+        </div>
         <div className="absolute inset-0 gradient-overlay-full" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
@@ -26,17 +29,25 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm mb-6"
+            >
+              <Heart className="w-4 h-4" /> Women's Fitness Fashion
+            </motion.div>
             <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-wider leading-none">
               GEAR UP.<br />
               <span className="text-primary text-glow">SHOW UP.</span><br />
               LEVEL UP.
             </h1>
             <p className="mt-6 text-muted-foreground text-lg md:text-xl max-w-xl mx-auto">
-              Premium fitness wear for those who never skip a day. Made for the grind.
+              Premium ladies' fitness wear for queens who never skip a day. Made for the grind. 🔥
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link to="/shop">
-                <Button size="lg" className="gap-2 text-base px-8 neon-glow">
+                <Button size="lg" className="gap-2 text-base px-8 neon-glow gradient-coral border-0">
                   Shop Now <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>
@@ -104,9 +115,12 @@ const Index = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className={`relative overflow-hidden rounded-lg ${i === 0 || i === 5 ? "row-span-2 aspect-[3/4]" : "aspect-square"}`}
+                className={`relative overflow-hidden rounded-xl ${i === 0 || i === 5 ? "row-span-2 aspect-[3/4]" : "aspect-square"}`}
               >
                 <img src={item.images[0]} alt={item.name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                  <span className="text-foreground text-sm font-medium">{item.name}</span>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -139,10 +153,10 @@ const Index = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
-                className="text-center p-6"
+                className="text-center p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-colors"
               >
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 mb-4">
-                  <item.icon className="w-6 h-6 text-primary" />
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full gradient-coral mb-4">
+                  <item.icon className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <h3 className="font-display text-xl tracking-wider mb-2">{item.title}</h3>
                 <p className="text-muted-foreground text-sm">{item.desc}</p>
@@ -168,7 +182,7 @@ const Index = () => {
               Join our community on Instagram for daily fitness inspo, new drops, and exclusive content.
             </p>
             <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="gap-2 px-8">
+              <Button size="lg" className="gap-2 px-8 gradient-coral border-0">
                 <Instagram className="w-4 h-4" /> @fitness_fanatics254
               </Button>
             </a>
