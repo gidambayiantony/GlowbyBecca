@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Instagram } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { INSTAGRAM_URL } from "@/data/products";
+import { WHATSAPP_NUMBER } from "@/data/services";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
   { to: "/", label: "Home" },
-  { to: "/shop", label: "Shop" },
+  { to: "/services", label: "Services" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -20,13 +20,12 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="Fitness Fanatics 254" className="h-10 w-10 rounded-lg" />
-            <span className="font-display text-xl tracking-wider text-foreground">
-              FF <span className="text-primary">254</span>
+            <img src={logo} alt="Glow by Becca" className="h-10 w-10 rounded-lg" />
+            <span className="font-display text-xl text-foreground">
+              Glow <span className="text-primary italic">by Becca</span>
             </span>
           </Link>
 
-          {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
@@ -39,18 +38,16 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-              <Instagram className="w-5 h-5" />
+            <a href={`tel:+${WHATSAPP_NUMBER}`} className="text-muted-foreground hover:text-primary transition-colors">
+              <Phone className="w-5 h-5" />
             </a>
           </div>
 
-          {/* Mobile toggle */}
           <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </Button>
         </div>
 
-        {/* Mobile menu */}
         {isOpen && (
           <div className="md:hidden pb-4 border-t border-border pt-4 animate-fade-up">
             {navLinks.map((link) => (
@@ -65,8 +62,8 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 py-3 text-sm text-muted-foreground hover:text-primary transition-colors">
-              <Instagram className="w-4 h-4" /> Instagram
+            <a href={`tel:+${WHATSAPP_NUMBER}`} className="flex items-center gap-2 py-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Phone className="w-4 h-4" /> Call Us
             </a>
           </div>
         )}
