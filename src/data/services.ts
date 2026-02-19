@@ -18,7 +18,7 @@ export type Service = {
   price?: string;
 };
 
-export const WHATSAPP_NUMBER = "254706777368";
+export const WHATSAPP_NUMBER = "254112928145";
 export const EMAIL = "lundurebeccah@gmail.com";
 
 export const SOCIALS = {

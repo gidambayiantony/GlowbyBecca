@@ -40,8 +40,8 @@ const Contact = () => {
 
               <div className="space-y-6">
                 {[
-                  { icon: Phone, label: "Phone", value: "+254 706 777 368", href: `tel:+${WHATSAPP_NUMBER}` },
-                  { icon: MessageCircle, label: "WhatsApp", value: "+254 706 777 368", href: getWhatsAppLink() },
+                  { icon: Phone, label: "Phone", value: "+254 112 928 145", href: `tel:+${WHATSAPP_NUMBER}` },
+                  { icon: MessageCircle, label: "WhatsApp", value: "+254 112 928 145", href: getWhatsAppLink() },
                   { icon: Mail, label: "Email", value: EMAIL, href: `mailto:${EMAIL}` },
                   { icon: MapPin, label: "Location", value: "Kianjai, Kenya", href: undefined },
                   { icon: Clock, label: "Hours", value: "Open daily — Appointment only", href: undefined },
