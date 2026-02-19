@@ -39,9 +39,7 @@ const ServiceCard = ({ service, index = 0, onQuickView }: ServiceCardProps) => {
         </span>
         <h3 className="font-display text-lg mt-1 text-foreground">{service.name}</h3>
         <p className="text-muted-foreground text-xs mt-1 line-clamp-2">{service.description}</p>
-        {service.price && (
-          <p className="text-primary text-sm font-medium mt-2">{service.price}</p>
-        )}
+        
         <a href={getWhatsAppLink(service.name)} target="_blank" rel="noopener noreferrer" className="mt-3 block">
           <Button className="w-full gap-2 gradient-gold border-0 text-primary-foreground" size="sm">
             <MessageCircle className="w-4 h-4" /> Book on WhatsApp
