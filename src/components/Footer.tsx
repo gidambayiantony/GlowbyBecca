@@ -32,7 +32,7 @@ const Footer = () => {
                 <MessageCircle className="w-4 h-4" /> WhatsApp
               </a>
               <a href={`tel:+${WHATSAPP_NUMBER}`} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
-                <Phone className="w-4 h-4" /> +254 706 777 368
+                <Phone className="w-4 h-4" /> +254 112 928 145
               </a>
               <a href={`mailto:${EMAIL}`} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="w-4 h-4" /> {EMAIL}
