@@ -3,6 +3,7 @@ import twists from "@/assets/services/twists.jpg";
 import crochet from "@/assets/services/crochet.jpg";
 import wigs from "@/assets/services/wigs.jpg";
 import manicure from "@/assets/services/manicure.jpg";
+import pedicure from "@/assets/services/pedicure.jpg";
 import facial from "@/assets/services/facial.jpg";
 import eyebrows from "@/assets/services/eyebrows.jpg";
 import henna from "@/assets/services/henna.jpg";
@@ -20,10 +21,16 @@ export type Service = {
 export const WHATSAPP_NUMBER = "254706777368";
 export const EMAIL = "lundurebeccah@gmail.com";
 
+export const SOCIALS = {
+  instagram: "https://instagram.com/beckybeauty141",
+  tiktok: "https://tiktok.com/@beautybybecky1",
+  youtube: "https://youtube.com/@becky457-v6e",
+};
+
 export const getWhatsAppLink = (serviceName?: string) => {
   const message = serviceName
-    ? `Hi Becca! I'd like to book ${serviceName} at Glow by Becca ✨`
-    : "Hi Becca! I'd like to book an appointment at Glow by Becca ✨";
+    ? `Hi Becky! I'd like to book ${serviceName} at Beauty by Becky ✨`
+    : "Hi Becky! I'd like to book an appointment at Beauty by Becky ✨";
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 };
 
@@ -91,7 +98,7 @@ export const services: Service[] = [
     name: "Pedicure",
     category: "beauty",
     description: "Treat your feet to a luxurious pedicure. Soak, scrub, and polish for perfectly pampered toes.",
-    image: manicure,
+    image: pedicure,
     featured: false,
   },
   {

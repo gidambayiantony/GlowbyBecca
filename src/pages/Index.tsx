@@ -36,7 +36,7 @@ const Index = () => {
             </motion.div>
             <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-tight">
               Where Your<br />
-              <span className="text-primary text-glow italic">Glow</span> Begins
+              <span className="text-primary text-glow italic">Beauty</span> Shines
             </h1>
             <p className="mt-6 text-muted-foreground text-lg md:text-xl max-w-xl mx-auto">
               Expert hairdressing, stunning nails, flawless facials & more. Book your appointment today. ✨
@@ -158,7 +158,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="font-display text-4xl md:text-5xl">
-              Why <span className="text-primary italic">Glow</span>?
+              Why <span className="text-primary italic">Becky</span>?
             </h2>
           </motion.div>
 
@@ -166,7 +166,7 @@ const Index = () => {
             {[
               { icon: Star, title: "Expert Hands", desc: "Skilled in braiding, twists, crochet, wigs, nails, facials, and more. Your beauty is in the best hands." },
               { icon: Clock, title: "By Appointment", desc: "Open every day, by appointment only. Your time is valued — no long waits, just great service." },
-              { icon: Heart, title: "Personal Touch", desc: "Every client gets individual attention. We listen, we care, and we make you glow." },
+              { icon: Heart, title: "Personal Touch", desc: "Every client gets individual attention. We listen, we care, and we make you shine." },
             ].map((item, i) => (
               <motion.div
                 key={item.title}
@@ -193,7 +193,7 @@ const Index = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <Sparkles className="w-10 h-10 text-primary mx-auto mb-4" />
             <h2 className="font-display text-4xl md:text-5xl mb-4">
-              Ready to <span className="text-primary italic">Glow</span>?
+              Ready to <span className="text-primary italic">Shine</span>?
             </h2>
             <p className="text-muted-foreground mb-8 max-w-md mx-auto">
               Book your appointment on WhatsApp for the fastest response. We can't wait to pamper you!
