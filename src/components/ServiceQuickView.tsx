@@ -27,7 +27,6 @@ const ServiceQuickView = ({ service, open, onOpenChange }: ServiceQuickViewProps
         </div>
 
         <p className="text-muted-foreground text-sm">{service.description}</p>
-        {service.price && <p className="text-primary font-semibold">{service.price}</p>}
 
         <a href={getWhatsAppLink(service.name)} target="_blank" rel="noopener noreferrer">
           <Button className="w-full gap-2 gradient-gold border-0 text-primary-foreground" size="lg">
